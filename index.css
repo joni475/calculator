@@ -113,6 +113,3 @@ button {
 [data-button-type="operator"].selected {
     background-color: lightcyan;
 }
-/* .calculator__keys > [data-button-type="operator"].is-pressed {
-    background: var(--grey-100);
-  } */
