@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Open Sans', sans-serif; 
+   font-size: 25px;
+   line-height: 1.4;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   background-image: url(./background.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.container {
+    width: 400px;
+}
+.calculator__display {
+    text-align: right;
+    padding: 20px;
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+    display: grid;
+    align-items: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 25px;
+    height: 100%;
+    border: 1px solid lightgray;
+    background-color: rgb(246, 252, 253);
+}
+.calculator__keys {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(5, 1fr);
+   height: 380px;
+}
+
+[data-key="1"] {
+    grid-row: 4;
+    grid-column: 1 / 2; 
+}
+[data-key="2"] {
+    grid-row: 4;
+    grid-column: 2 / 3;
+}
+[data-key="3"] {
+    grid-row: 4;
+    grid-column: 3 / 4;
+}
+[data-key="4"] {
+    grid-row: 3;
+    grid-column: 1 / 2;
+}
+[data-key="5"] {
+    grid-row: 3;
+    grid-column: 2 / 3;
+}
+[data-key="6"] {
+    grid-row: 3;
+    grid-column: 3 / 4;
+}
+[data-key="7"] {
+    grid-row: 2;
+    grid-column: 1 / 2;
+}
+[data-key="8"] {
+    grid-row: 2;
+    grid-column: 2 / 3;
+}
+[data-key="9"] {
+    grid-row: 2;
+    grid-column: 3 / 4;
+}
+[data-key="0"] {
+    grid-row: 5;
+    grid-column: 1 / 2;
+}
+[data-key="decimal"] {
+    grid-row: 5;
+    grid-column: 2 / 3;
+}
+[data-key="clear"] {
+    grid-row: 5;
+    grid-column: 3 / 4;
+}
+[data-key="equal"] {
+    grid-row: 4 span / -1;
+    grid-column: 4 / 5;
+    background-color: rgb(238, 110, 63);
+}
+[data-button-type="operator"] {
+    background-color: #f0ecec;
+}
+[data-button-type="operator"]:active,
+[data-button-type="decimal"]:active,
+[data-button-type="clear"]:active,
+[data-button-type="equal"]:active,
+[data-button-type="number"]:active {
+    background-color: lightgray;
+}
+
+[data-button-type="operator"].selected {
+    background-color: lightcyan;
+}
+/* .calculator__keys > [data-button-type="operator"].is-pressed {
+    background: var(--grey-100);
+  } */
